@@ -8,6 +8,7 @@ import { EmployeeFormComponent } from './components/employee-form/employee-form.
 import { EmployeeViewEditComponent } from './components/employee-view-edit/employee-view-edit.component';
 import { EmployeesListComponent } from './components/employees-list/employees-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TaskListComponent } from './components/task-list/task-list.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavigationComponent,
     EmployeeFormComponent,
     EmployeeViewEditComponent,
-    EmployeesListComponent
+    EmployeesListComponent,
+    TaskListComponent
   ],
   imports: [
     BrowserModule,

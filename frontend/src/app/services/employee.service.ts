@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import {Employee} from '../models/Employee'
+import { myTask } from '../models/myTask';
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +23,10 @@ export class EmployeeService {
     form.append('office', office);
     form.append('salary', salary);
     return this.http.post(this.URI, form);
+  }
+
+  getTasks(listId:string) {
+    return this.http.get<myTask>(`${this.URI}/${listId}/tasks`);
   }
 
   getEmployees() {

@@ -34,6 +34,14 @@ export class EmployeeFormComponent implements OnInit {
         )
   }
 
+  deleteEmployee(id:  HTMLInputElement) {
+    this.employeeService.deleteEmployee(id.value)
+      .subscribe(res => {
+        console.log(res)
+        this.router.navigate(['/employees/list']);
+      })
+  }
+
   resetForm(form:HTMLFormElement) {
     if (form) {
       form.reset()

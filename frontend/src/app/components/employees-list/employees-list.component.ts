@@ -51,12 +51,24 @@ export class EmployeesListComponent implements OnInit {
         )
   }
 
+
+  deleteEmployee(_id:string,name:string,position:string,office:string, salary:string) {
+    this.getId(_id,name, position, office, salary)
+    this.employeeService.deleteEmployee(_id)
+      .subscribe(res => {
+        console.log(res)
+        //this.router.navigate(['/employees/list']);
+      })
+  }
+
+
   getId(
     _id: string,
     name:string,
     position:string,
     office:string,
     salary:string){
+      //this.router.navigate(['/employees', _id]);
       this.employeeService
       .getId(_id,name,position,office,salary)
       .subscribe(
@@ -64,5 +76,5 @@ export class EmployeesListComponent implements OnInit {
         err => err
       )
 
-  }
+ }
 }

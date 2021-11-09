@@ -10,11 +10,13 @@ export async function getEmployees(req: Request, res: Response): Promise<Respons
 
 export async function createEmployee(req: Request, res: Response): Promise<Response> {
     const { name, position, office, salary } = req.body;
+    console.log("hola");
     const newEmployee = { name, position, office, salary};
     const employee = new Employee(newEmployee);
     await employee.save();
     return res.json({
-        message: 'Employee Saved Successfully',
+        message: req.body,
+       // message: 'Employee Saved Successfully',
         employee
     });
 }; 
