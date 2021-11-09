@@ -1,0 +1,31 @@
+
+    <!-- TABLE -->
+    <div class="col-md-8">
+      <table class="table table-striped">
+        <thead>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Office</th>
+          <th>Salary</th>
+          <th>Tasks</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of employees">
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.position }}</td>
+            <td>{{ employee.office }}</td>
+            <td>{{ employee.salary }}</td>
+            <td> </td>
+
+            <td>
+              <a (click)="getId(employee._id,employee.name,employee.position, employee.office, employee.salary)" style="float: right" class="btn btn-secondary btn-sm">
+                <i class="material-icons">Edit</i>
+              </a>
+            </td>
+
+
+          </tr>
+        </tbody>
+      </table>
+
+      </div>
