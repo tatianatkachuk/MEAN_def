@@ -1,0 +1,10 @@
+GET http://localhost:4000/api/employees
+
+###
+POST http://localhost:4000/api/employees/
+
+###
+DELETE http://localhost:4000/api/employees/61867113fce8ca4f96d0f325
+
+###
+GET http://localhost:4000/api/employees/618676ec32882fe5c25234ad
